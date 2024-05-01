@@ -1,4 +1,10 @@
 # CovidSite
+## About
+
+For this project using PHP, MySQL, CSS, JS and HTML I created this website as a project,
+This project allowed me to Learn in detaail about so many languages and what happens in the backend when you click on that link.
+I was introduced to many new concepts and enjoyed every second of it, even when we almost broke the entire project.
+
 ## A covid Management System Website
 The scope of covid system includes:
 - Advertise details of covid testing.
