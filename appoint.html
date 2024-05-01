@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="appoint.css">
+    <title></title>
+</head>
+<body align="center">
+    <div class="bg-gra-02"><font color="white">
+        <span class="heading">Vaccine Slot Booking</span></font> 
+        <form action="appoint.php" method="POST">
+			<font color="white">
+				Vaccine</font><br>
+            <label for="test1">
+				<span class="box" id="test_box1" >
+					<input type="checkbox" name="Covishield" value="Covishield" id="test1" onclick="testbox1()">
+					<p> Covishield </p>
+				</span>
+			</label>
+			<label for="test2">
+				<span class="box" id="test_box2">
+					<input type="checkbox" name="Covaxin" value=" Covaxin" id="test2" onclick="testbox2()">
+					<p> Covaxin </p>
+				</span>
+			</label>
+            <label for="test3">
+				<span class="box" id="test_box3">
+					<input type="checkbox" name="Sputnik" value="Sputnik" id="test3" onclick="testbox3()">
+					<p>Sputnik</p>
+				</span>
+			</label>
+            <span id="testBoxError"></span>
+            <br><br><br>
+			
+			<font color="white">
+				Dose</font><br>
+            <label for="test4">
+				<span class="box" id="test_box4" >
+					<input type="checkbox" name="First" value="First" id="test4" onclick="testbox1()"><p> First </p>
+				</span>
+			</label>
+			
+            <label for="test5">
+				<span class="box" id="test_box5">
+					<input type="checkbox" name="Second" value="Second" id="test5" onclick="testbox2()">
+					<p> Second </p>
+				</span>
+			</label>
+            <span id="testBoxError"></span>
+            <br><br><br>
+			
+			<font color="white">
+				Date</font> <input type="date" name="appdate" id="appdate" class="date" required>
+            <br><br><br>
+			
+			<font color="white">
+				Time Slots </font>
+            <div class="slot" id="slot" >
+                <label for="slot1">
+					<span class="box   selected_radbox" id="slt_box1" >
+						<input type="radio" name="slot" value="Morning Slot" id="slot1" onclick="slotbox1()" checked>
+						<pre> 10:00 AM - 01:00 PM (Morning Slot) </pre>
+					</span>
+				</label> 
+				<br>
+                <label for="slot2">
+				    <span class="box   " id="slt_box2">
+						<input type="radio" name="slot" value="Afternoon Slot" id="slot2" onclick="slotbox2()" >
+						<pre>01:00 PM - 04:00 PM (Afternoon Slot)</pre>
+					</span>
+				</label> 
+				<br>
+                <label for="slot3">
+					<span class="box   " id="slt_box3">
+						<input type="radio" name="slot" value="Evening Slot" id="slot3" onclick="slotbox3()" >
+						<pre> 04:00 PM - 07:00 PM (Evening Slot)  </pre>
+					</span>
+				</label>
+            </div>
+            <br><br>
+			
+            <span onclick="openNav()" class="button">Book</span>
+
+
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlaycontent">
+                    <form>
+                        <span class="heading2">Payment</span>
+                        <table align="center" >
+                            <tr>
+                                <td align="right">CC Number</td>
+                                <td><input type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="1111 2222 3333 4444" name="cardno" id="cardno" title="Length of Credit Card Number should be 16 digits!" required></td>
+                            </tr>
+                            <tr>
+                                <td align="right">CVV</td>
+                                <td><input type="tel" maxlength="3" pattern="[0-9][0-9][0-9]" name="cvv" id="cvv" placeholder="123" required></td>
+                            </tr>
+                            <tr>
+                                <td align="right">Valid Till</td>
+                                <td><input type="date" name="validTillDate" required></td>
+                            </tr>
+                            <tr>
+                                <td align="right">Total amount</td>
+                                <td><span id="totalAmount"></span></td>
+                            </tr>
+                        </table> <br>
+                        <input type="submit" value="Book Appointment" class="button2" onsubmit="">
+
+                    </form>
+                </div>
+            </div>
+            <script src="JSfiles\appoint.js"></script>
+        </form>
+    </div>
+
+
+    
+</body>
+</html>
